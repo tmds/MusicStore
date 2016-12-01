@@ -20,8 +20,6 @@ namespace MusicStore
 {
     public class StartupOpenIdConnectTesting
     {
-        private readonly Platform _platform;
-
         public StartupOpenIdConnectTesting(IHostingEnvironment env)
         {
             //Below code demonstrates usage of multiple configuration sources. For instance a setting say 'setting1' is found in both the registered sources,
@@ -32,7 +30,6 @@ namespace MusicStore
                 .AddEnvironmentVariables(); //All environment variables in the process's context flow in as configuration values.
 
             Configuration = builder.Build();
-            _platform = new Platform();
         }
 
         public IConfiguration Configuration { get; private set; }
