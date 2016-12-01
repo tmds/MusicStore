@@ -7,8 +7,13 @@
   "DefaultAdminPassword": "YouShouldChangeThisPassword1!",
   "Data": {
     "DefaultConnection": {
+      // Provider should be: "platform", memory", "sqlserver" or "npgsql"
+      //   "platform" uses "sqlserver" on Windows and "memory" otherwise
+      "Provider": "platform",
       // Use a shared (and running) LocalDB database when executing in IIS e.g.
-      // "Server=(localdb)\\.\\IIS_DB;Database=MusicStore;Trusted_Connection=False;MultipleActiveResultSets=true;User ID=iis_login;Password=********"
+      //   "Server=(localdb)\\.\\IIS_DB;Database=MusicStore;Trusted_Connection=False;MultipleActiveResultSets=true;User ID=iis_login;Password=********"
+      // Use a PostgreSQL database e.g.
+      //   "Host=localhost;Database=musicstore;Username=musicstore;Password=musicstore"
       "ConnectionString": "Server=(localdb)\\MSSQLLocalDB;Database=MusicStore;Trusted_Connection=True;MultipleActiveResultSets=true;Connect Timeout=30;"
     }
   }

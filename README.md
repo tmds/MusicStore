@@ -38,3 +38,7 @@ More information at [src/MusicStore/StartupNtlmAuthentication.cs](src/MusicStore
 
 ###OpenIdConnect authentication
 More information at [src/MusicStore/StartupOpenIdConnect.cs](src/MusicStore/StartupOpenIdConnect.cs).
+
+###Use PostgreSQL (via Npgsql)
+
+Edit `config.json` and set the `Data::DefaultConnection::Provider` to `npgsql` and the `Data::DefaultConnection::ConnectionString` to your database.
